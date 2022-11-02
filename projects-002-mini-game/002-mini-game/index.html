@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/e2118f7bd7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- color boxes -->
+    <div class="gameContainer ">
+      <div class="colorContainer">
+        <div class="col1 col" color="blue"></div>
+        <div class="col2 col" color ="green"></div>
+        <div class="col3 col" color="brown"></div>
+        <div class="col4 col" color="red"></div>
+        <div class="col5 col" color="yellow"></div>
+        <div class="col6 col" color="pink"></div>
+      </div>
+
+      <!-- addition holder for content display  -->
+      <div class="header">
+        <i id="info" class="fa-solid fa-circle-info"></i>
+          <div class="information">  
+          <p id="player">Name:  <span> </span></p>
+          <p id="choosenCol">You Choose Color:  </p>
+        </div>
+        <div class="betInfo">
+          
+          <p id="bet">Bet for amount last round: </p>
+        </div>
+        <div class="score">
+          <label id="labelScore">POINTS: 300</label>
+          <input type="number" id="pointsCont" value="300" class="hidden">
+        </div>
+      </div>
+      <div class="highScore"></div>
+      <div class="submitContainer">
+        <input id="roll" type="submit" value="BET" />
+      </div>
+    </div>
+    <!-- modal -->
+    <div class="modalContainer ">
+      <div class="diceCont">
+        <img id="diceBlue" class="dice" src="images/dice-blue.png" />
+        <img id="diceGreen" class="dice" src="images/dice-green.png" />
+      </div>
+      <div class="labelResult">
+        <label id="winLose"> </label> </div>
+        <div id="colorSelectedDiv"> <label id="colorSelected"></label></div> 
+      <div class="confirmCont">
+        <button id="rollDice">ROLL DICE</button>
+        <button id="closeDice" class="hidden">CLOSE</button>
+      </div>
+    </div>
+    <!-- how to play -->
+    <div class="instCon">
+      <div class="insHead"><h2>How To Play the Color Game:</h2></div>
+      <div class="instruction">
+        <p>
+         <ul>
+          <li>First off, an initial 300 points will be given to each player before the start of the game.</li>
+          <li>You can only pick one color of your choice and use the given points to play the game and earn more succeedingly.</li>
+          <li> Each round, 2 dice are rolled, and if luck is in your side to get the same color, your points will be doubled as well.</li>
+          <li> Get as much points as you can until you reach the 5th round! </li>
+          <li>Don’t exhaust your points or the game is over.</li>
+        </ul>
+        </p>
+      </div class="insOkay">
+      <div id="insBtn">
+      <button >OKAY</button>
+    </div>
+    </div>
+    <!-- betting tab  -->
+    <div class="betCon">
+      <div class="betBal">
+        <label > Current Balance </label>
+        <label id="betBalance" > 300 </label> 
+      </div>
+      <div class="bettorInfo">
+      <label id="betLabel" > Bet amount for color green </label> 
+      <input id="betAmount" type="number" value="300">
+    </div>
+    <div class="betBtn">
+      <button id="betBtnOkay"> OKAY </button>
+      <button id="betBtnBack"> BACK </button>
+    </div>
+    </div>
+    <!-- landing page -->
+       <div class="userPlayer">
+        <div id="userPlayerBox">
+          <label > Name:  </label>
+          <input type="text"id="pName">
+        </div>
+        <div class="userPlayerBtn">
+          <button id="userBtnOkay">OKAY</button>
+        </div>
+      </div>
+  
+      <!-- end Game -->
+    <div class="end hidden">
+      <div id="gEnd">
+        <h4> Game Ended </h4>
+      </div>
+      <div id="gEndMsg">
+        <p id="gEndP"> You have 0/5 rounds left / 0 points balance  </p>
+      </div>
+      <div id="restart"> 
+        <button id="restartBtn"> Restart Game </button>
+        <button id="newGameBtn"> New Game</button>
+      </div>
+    </div>
+    <script src="script/app.js"></script>
+  </body>
+</html>
